@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Post;
-use App\Http\Requests\StorePostRequest;
-use App\Http\Requests\UpdatePostRequest;
+use App\Models\Image;
+use App\Http\Requests\StoreImageRequest;
+use App\Http\Requests\UpdateImageRequest;
 
-class PostController extends Controller
+class ImageController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -31,10 +31,10 @@ class PostController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StorePostRequest  $request
+     * @param  \App\Http\Requests\StoreImageRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StorePostRequest $request)
+    public function store(StoreImageRequest $request)
     {
         //
     }
@@ -42,10 +42,10 @@ class PostController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Post  $post
+     * @param  \App\Models\Image  $image
      * @return \Illuminate\Http\Response
      */
-    public function show(Post $post)
+    public function show(Image $image)
     {
         //
     }
@@ -53,10 +53,10 @@ class PostController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Post  $post
+     * @param  \App\Models\Image  $image
      * @return \Illuminate\Http\Response
      */
-    public function edit(Post $post)
+    public function edit(Image $image)
     {
         //
     }
@@ -64,11 +64,11 @@ class PostController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdatePostRequest  $request
-     * @param  \App\Models\Post  $post
+     * @param  \App\Http\Requests\UpdateImageRequest  $request
+     * @param  \App\Models\Image  $image
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdatePostRequest $request, Post $post)
+    public function update(UpdateImageRequest $request, Image $image)
     {
         //
     }
@@ -76,10 +76,10 @@ class PostController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Post  $post
+     * @param  \App\Models\Image  $image
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Post $post)
+    public function destroy(Image $image)
     {
         //
     }
