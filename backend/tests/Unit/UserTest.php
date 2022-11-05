@@ -11,7 +11,7 @@ class UserTest extends TestCase
      *
      * @return void
      */
-    public function test_user_can_be_authenticated()
+    public function test_user_can_be_created()
     {
 
     }

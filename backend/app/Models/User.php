@@ -41,19 +41,14 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function videos(){
-        return $this->hasMany(Video::class);
+
+    public function posts(){
+        return $this->hasMany(Post::class);
     }
-    public function images(){
-        return $this->hasMany(Image::class);
+    public function made_requests(){
+        return $this->hasMany(Friendship::class, 'from_id');
     }
-    public function comments(){
-        return $this->hasMany(Comment::class);
-    }
-    public function likes(){
-        return $this->hasMany(Like::class);
-    }
-    public function images(){
-        return $this->hasMany(Image::class);
+    public function recieved_requests(){
+        return $this->hasMany(Friendship::class, 'to_id');
     }
 }

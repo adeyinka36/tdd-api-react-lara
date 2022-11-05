@@ -19,6 +19,7 @@ class PostFactory extends Factory
         return [
             "user_id" => fake()->numberBetween(1,10),
             "post_type" => ['C', 'V', 'I'][rand(0,2)],
+            "contnet" => fake()->text(100)
         ];
     }
 }

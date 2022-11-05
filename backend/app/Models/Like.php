@@ -11,11 +11,10 @@ class Like extends Model
     protected $table = 'likes';
     protected $fillable = [
         'liker_id',
-        'likee_id',
-        'like_item'
+        'post_id',
     ];
 
-    public function user(){
-        return $this->belongsTo(User::class);
+    public function post(){
+        return $this->belongsTo(Post::class);
     }
 }

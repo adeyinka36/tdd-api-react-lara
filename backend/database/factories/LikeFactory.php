@@ -18,9 +18,8 @@ class LikeFactory extends Factory
     {
         $postType = ['C', 'V', 'I'][rand(0,2)];
         return [
-            "liker" => fake()->numberBetween(1, 10),
-            "likee" => fake()->numberBetween(1, 10),
-            "liked_item" => $postType,
+            "liker_id" => fake()->numberBetween(1, 10),
+            "post_id" => fake()->numberBetween(1, 30),
         ];
     }
 }

@@ -12,16 +12,17 @@ class Friendship extends Model
     protected $table = 'friendships';
 
     protected $fillable = [
-        'url',
-        'user_id'
+        'from_id',
+        'to_id',
+        'status'
     ];
 
-    public function requester(){
-        return $this->belongsTo(User::class, 'requester_id');
+    public function from(){
+        return $this->belongsTo(User::class, 'from_id');
     }
 
-    public function requestee(){
-        return $this->belongsTo(User::class, 'requestee_id');
+    public function to(){
+        return $this->belongsTo(User::class, 'to_id');
     }
 
 }

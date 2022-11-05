@@ -18,8 +18,8 @@ class CommentFactory extends Factory
     {
         return [
             'commenter_id'=>fake()->numberBetween(1,10),
-            'commentee_id'=>fake()->numberBetween(1,10),
-            'commented_on'=>$postType = ['C', 'V', 'I'][rand(0,2)]
+            'post_id'=>fake()->numberBetween(1,30),
+            'parent_comment_id'=>fake()->numberBetween(1,10),
         ];
     }
 }

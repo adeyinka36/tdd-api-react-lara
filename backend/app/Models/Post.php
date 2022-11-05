@@ -14,10 +14,18 @@ class Post extends Model
     protected $fillable = [
         'user_id',
         'created_at',
-        'post_type'
+        'post_type',
+        'content'
     ];
 
     public function user(){
         return $this->belongsTo(User::class);
     }
+    public function likes(){
+        return $this->hasMany(Like::class, 'liker_id');
+    }
+    public function comments(){
+        return $this->hasMany(Comment::class, 'commenter_id');
+    }
+
 }

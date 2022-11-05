@@ -17,9 +17,9 @@ class FriendshipFactory extends Factory
     public function definition()
     {
         return [
-           "status" => ['C', 'V', 'I'][rand(0,2)],
-           "requester_id" =>fake()->numberBetween(1,10),
-           "requestee_id" =>fake()->numberBetween(1,10),
+           "status" => ['P', 'R', 'A'][rand(0,2)],
+           "from_id" =>fake()->numberBetween(1,10),
+           "to_id" =>fake()->numberBetween(1,10),
         ];
     }
 }

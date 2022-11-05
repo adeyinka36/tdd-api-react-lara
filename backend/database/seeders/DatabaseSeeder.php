@@ -3,7 +3,7 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
-use App\Models\{User, Friendship, Video, Image, Like, Comment};
+use App\Models\{Post, User, Friendship, Video, Image, Like, Comment};
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -17,10 +17,9 @@ class DatabaseSeeder extends Seeder
     {
          User::factory(10)->create();
          Friendship::factory(20)->create();
+         Post::factory(30)->create;
          Comment::factory(20)->create();
          Like::factory(20)->create();
-         Image::factory(20)->create();
-         Video::factory(20)->create();
 
 
 //
