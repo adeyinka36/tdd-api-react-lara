@@ -19,6 +19,9 @@ return new class extends Migration
             $table->unsignedBigInteger('likee_id');
             $table->char('item_liked');
             $table->timestamps();
+
+            $table->foreign('liker_id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('likee_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
 

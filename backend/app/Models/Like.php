@@ -14,4 +14,8 @@ class Like extends Model
         'likee_id',
         'like_item'
     ];
+
+    public function user(){
+        return $this->belongsTo(User::class);
+    }
 }

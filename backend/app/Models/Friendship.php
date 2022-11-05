@@ -15,4 +15,13 @@ class Friendship extends Model
         'url',
         'user_id'
     ];
+
+    public function requester(){
+        return $this->belongsTo(User::class, 'requester_id');
+    }
+
+    public function requestee(){
+        return $this->belongsTo(User::class, 'requestee_id');
+    }
+
 }
