@@ -19,7 +19,7 @@ class CommentFactory extends Factory
         return [
             'commenter_id'=>fake()->numberBetween(1,10),
             'post_id'=>fake()->numberBetween(1,30),
-            'parent_comment_id'=>fake()->numberBetween(1,10),
+//            'parent_comment_id'=>fake()->numberBetween(1,10),
         ];
     }
 }

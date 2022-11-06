@@ -20,8 +20,11 @@ Route::middleware(['auth:sanctum'])->group( function () {
     Route::resource('/user', UserController::class)->except(['create', 'store', 'show']);
 });
 
+
+
 Route::prefix('/user')->group(function () {
     Route::post('/', [UserController::class, 'store']);
     Route::post('/login', [UserController::class, 'show']);
+    Route::get('/register', [UserController::class, 'create']);
 });
 

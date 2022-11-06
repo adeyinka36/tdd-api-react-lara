@@ -17,10 +17,11 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('commenter_id');
             $table->unsignedBigInteger('post_id');
-            $table->char('parent_comment_id');
+            $table->unsignedBigInteger('parent_comment_id')->nullable();
             $table->timestamps();
 
             $table->foreign('commenter_id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('post_id')->references('id')->on('posts')->onDelete('cascade');
             $table->foreign('parent_comment_id')->references('id')->on('comments')->onDelete('cascade');
         });
     }
